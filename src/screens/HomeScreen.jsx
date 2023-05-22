@@ -10,7 +10,7 @@ const HomeScreen = () => {
   // *
   return (
     <>
-      <StatusBar style='light' />
+      <StatusBar style='dark' />
       <View style={styles.background}>
         <SearchBar
           term={term}
@@ -19,10 +19,15 @@ const HomeScreen = () => {
         />
         <ScrollView>
           <View>
-            <Text>TEST</Text>
+            <Text style={styles.mainText}>TEST</Text>
             <Button
-              title='PRESS ME'
-              onPress={() => navigation.navigate('About')}
+              title='About'
+              onPress={() =>
+                navigation.navigate('About', {
+                  screenId: 1,
+                  otherParam: 'Whatever',
+                })
+              }
             />
           </View>
         </ScrollView>

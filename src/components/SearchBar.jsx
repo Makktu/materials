@@ -11,8 +11,8 @@ const SearchBar = ({ term, onTermChange, onTermSubmit }) => {
         autoCorrect={false}
         autoComplete='off'
         style={styles.inputStyle}
-        placeholder='Search'
-        placeholderTextColor='yellow'
+        placeholder='Search All Materials'
+        placeholderTextColor='#f4511e'
         value={term}
         onChangeText={(newTerm) => onTermChange(newTerm)}
         onEndEditing={() => onTermSubmit()}
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   },
   inputStyle: {
     fontSize: 26,
-    color: 'yellow',
+    color: '#f4511e',
     width: '100%',
     bottom: 1,
   },
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     marginLeft: 6,
     marginRight: 4,
     top: 2,
-    color: 'yellow',
+    color: '#f4511e',
   },
 });
 
