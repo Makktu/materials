@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { View, StyleSheet, Text, ScrollView, Button } from 'react-native';
 import SearchBar from '../components/SearchBar';
+import Content from '../components/Content';
 import { StatusBar } from 'expo-status-bar';
 
 const HomeScreen = () => {
@@ -18,19 +19,19 @@ const HomeScreen = () => {
           onTermSubmit={() => console.log(term)}
         />
         <ScrollView>
-          <View>
-            <Text style={styles.mainText}>TEST</Text>
-            <Button
-              title='About'
-              onPress={() =>
-                navigation.navigate('About', {
-                  screenId: 1,
-                  otherParam: 'Whatever',
-                })
-              }
-            />
-          </View>
+          <View></View>
+          <Content />
         </ScrollView>
+        {/* <Button
+          style={styles.aboutStyle}
+          title='About'
+          onPress={() =>
+            navigation.navigate('About', {
+              screenId: 1,
+              otherParam: 'Whatever',
+            })
+          }
+        /> */}
       </View>
     </>
   );
@@ -53,6 +54,9 @@ const styles = StyleSheet.create({
     marginVertical: 2,
     fontSize: 18,
     left: 5,
+  },
+  aboutStyle: {
+    top: '90%',
   },
 });
 
